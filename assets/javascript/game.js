@@ -41,6 +41,15 @@ $(document).ready(function () {
         });
 
     }
+
+    function changeDisplay(){
+        var imageStill = $(this).attr("src");
+        var image = $(this).attr("value");
+        $(this).attr("src",image);
+        $(this).attr("value",imageStill);
+
+    }
+
     function loadMore() {
 
     }
