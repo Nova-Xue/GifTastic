@@ -35,6 +35,7 @@ $(document).ready(function () {
                     var newHeading = $("<a>").text(animalObj.title + " Rating:" + animalObj.rating.toUpperCase());
                     newHeading.attr("href", animalObj.url);
                     var newImg = $("<img>").attr("src", animalObj.images.fixed_width_still.url);
+                    newImg.addClass("img-fluid");
                     newImg.attr("value", animalObj.images.fixed_width.url);
                     newCol.append(newHeading, newImg);
                     newRow.append(newCol);
@@ -71,6 +72,7 @@ $(document).ready(function () {
                     var newHeading = $("<a>").text(animalObj.title + " Rating:" + animalObj.rating.toUpperCase());
                     newHeading.attr("href", animalObj.url);
                     var newImg = $("<img>").attr("src", animalObj.images.fixed_width_still.url);
+                    newImg.addClass("img-fluid");
                     newImg.attr("value", animalObj.images.fixed_width.url);
                     newCol.append(newHeading, newImg);
                     newRow.append(newCol);
@@ -89,12 +91,14 @@ $(document).ready(function () {
         if (buttons.indexOf(animal) == -1) {//input not in array
             buttons.push(animal);
             displayButtons();
-            $("#button-input").text("");
+            
         } else {
 
             alert("you have this animal!");
+            
         }
-
+        ///val not text
+        $("#button-input").val("");
     });
 
     $(".load-more").click(loadMore);
